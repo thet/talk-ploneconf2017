@@ -1,0 +1,354 @@
+<!doctype html>
+<html lang="en">
+<head>
+  <meta charset="utf-8">
+
+  <title>This is Plone</title>
+
+  <meta name="description" content="Resource Registry Demystified - Plone Conference 2017">
+  <meta name="author" content="Johannes Raggam, programmatic">
+  <meta name="viewport" content="width=device-width, initial-scale=1.0">
+  <link rel="stylesheet" href="./html/bower_components/reveal.js/css/reveal.css">
+  <link rel="stylesheet" href="./html/bower_components/reveal.js/css/theme/simple.css">
+  <!-- For syntax highlighting -->
+  <link rel="stylesheet" href="./html/bower_components/reveal.js/lib/css/zenburn.css">
+  <link rel="stylesheet" href="./html/custom.css">
+  <!-- If the query includes 'print-pdf', include the PDF print sheet -->
+  <script>
+    if( window.location.search.match( /print-pdf/gi ) ) {
+      var link = document.createElement( 'link' );
+      link.rel = 'stylesheet';
+      link.type = 'text/css';
+      link.href = './html/bower_components/reveal.js/css/print/pdf.css';
+      document.getElementsByTagName( 'head' )[0].appendChild( link );
+    }
+  </script>
+  <!--[if lt IE 9]>
+  <script src="./html/bower_components/reveal.js/lib/js/html5shiv.js"></script>
+  <![endif]-->
+</head>
+
+<body>
+    <!--
+blue
+#0083BE
+green
+#0BD52D
+yellow
+#CBBE00
+red
+#CB4B0A
+#ED0200
+#0B934A
+#B35725
+#7E231D
+
+colors:
+https://kuler.adobe.com/create/color-wheel/?base=2&rule=Analogous&selected=4&name=My%20Kuler%20Theme&mode=rgb&rgbvalues=0.7950980392156863,0.21951409859249027,0,0.5686743281526693,0.018820642827770902,0.8350980392156863,0,0.5137254901960784,0.7450980392156863,0.14597107605243181,0.8350980392156863,0.04175490196078435,0.7950980392156863,0.5971390297864673,0.03975490196078435&swatchOrder=0,1,2,3,4
+
+main slide title
+<h1></h1>
+
+slide title
+<h2></h2>
+
+subtitle
+<h3></h3>
+
+paragraph
+<p></p>
+
+<blockquote>
+</blockquote>
+-->
+
+  <!-- section class="fullscreen" data-background-iframe="./html/map.html"></section-->
+  <!-- section class="fullscreen" data-background-video=""></section-->
+  <!-- section class="fullscreen" data-background-image=""></section-->
+  <!-- 
+  <section data-background="blue">
+  <section data-background="yellow">
+  <section data-background="green">
+  <section data-background="#333333">
+  -->
+
+  <!--
+  <section data-background="green">
+    <section class="cover">
+      <h2>
+      </h2>
+    </section>
+    <section>
+      <ul>
+        <li>
+        </li>
+      </ul>
+    </section>
+  </section>
+  -->
+
+<div class="reveal">
+<div class="slides">
+
+  <section class="cover" data-background="blue">
+    <h1>Resource Registry<br/>Demystified</h1>
+    <br/>
+    <br/>
+    <br/>
+    <footer>
+      Johannes Raggam<br/>@ Plone Conference 2017, Barcelona
+    </footer>
+  </section>
+
+  <section data-background="green">
+    <section class="cover">
+      <h2>Who am I</h2>
+    </section>
+    <section>
+      <ul>
+        <li>
+Johannes Raggam
+        </li>
+        <li>
+Graz / Austria
+        </li>
+      </ul>
+    </section>
+    <section>
+      <ul>
+        <li>
+programmatic
+        </li>
+        <li>
+BlueDynamics Alliance Memeber
+        </li>
+        <li>
+Plone Framework Team Member
+        </li>
+      </ul>
+    </section>
+    <section>
+      <ul>
+        <li>
+<a href="https://github.com/thet" target="_blank">https://github.com/thet</a>
+        </li>
+        <li>
+<a href="https://twitter.com/thetetet" target="_blank">https://twitter.com/thetetet</a>
+        </li>
+        <li>
+<a href="http://programmatic.pro/" target="_blank">http://programmatic.pro</a>
+        </li>
+      </ul>
+    </section>
+    <section>
+      <ul>
+        <li>
+<a href="https://thet.github.io/resourceregistry-demystified" target="_blank">https://thet.github.io/resourceregistry-demystified</a>
+        </li>
+      </ul>
+    </section>
+  </section>
+
+
+  <section data-background="yellow">
+    <section class="cover">
+      <h2>
+What is the resource registry?
+      </h2>
+    </section>
+    <section>
+      <ul>
+        <li>
+Register and deploy JS and CSS resources
+        </li>
+        <li>
+Organize depenencies
+        </li>
+        <li>
+Optimize resources and requests
+        </li>
+      </ul>
+    </section>
+    <section>
+      <ul>
+        <li>
+Same purpose and goals in Plone 4 and 5
+        </li>
+      </ul>
+    </section>
+  </section>
+
+
+  <section data-background="green">
+    <section class="cover">
+      <h2>
+The resource registry in Plone 4
+      </h2>
+    </section>
+    <section>
+      SCREENSHOT
+    </section>
+    <section>
+      <p>
+Concatenation and minification in defined order
+      </p>
+    </section>
+    <section>
+      <h3>
+Pros
+      </h3>
+      <ul>
+        <li>
+Simple architecture
+        </li>
+        <li>
+Addons can easily register their resources
+        </li>
+        <li>
+Resources are immediately available
+        </li>
+        <li>
+Automatic cache management
+        </li>
+      </ul>
+    </section>
+    <section>
+      <h3>
+Cons
+      </h3>
+      <ul>
+        <li>
+No formally defined dependencies
+        </li>
+        <li>
+Hard to manage dependencies
+        </li>
+        <li>
+Hard to keep requests optimized
+        </li>
+      </ul>
+    </section>
+  </section>
+
+
+  <section data-background="blue">
+    <section class="cover">
+      <h2>
+The resource registry in Plone 5
+      </h2>
+    </section>
+    <section>
+      SCREENSHOT
+    </section>
+    <section>
+      <p>
+Based on plone.registry, RequireJS, LESS and gulp (CLI)
+      </p>
+    </section>
+    <section>
+      <h3>
+Pros
+      </h3>
+      <ul>
+        <li>
+Formally defined dependencies  
+        </li>
+        <li>
+Easier to manage dependencies
+        </li>
+        <li>
+Better CSS code organization
+        </li>
+        <li>
+Better request optimization
+        </li>
+        <li>
+Support for "legacy scripts" like in Plone 4
+        </li>
+        <li>
+Automatic cache management
+        </li>
+      </ul>
+    </section>
+    <section>
+      <h3>
+Cons
+      </h3>
+      <ul>
+        <li>
+Precompiled bundles needed
+        </li>
+        <li>
+Higher complexity
+        </li>
+        <li>
+Hard to debug
+        </li>
+        <li>
+Some technologies obsolete
+        </li>
+      </ul>
+    </section>
+    <section>
+      <h3>
+A praise for the resource registry
+      </h3>
+      <ul>
+        <li>
+It works quite well
+        </li>
+        <li>
+A huge improvement for JS and CSS management
+        </li>
+        <li>
+It's magic.
+        </li>
+      </ul>
+    </section>
+  </section>
+
+
+
+  <section data-background="green">
+    <section class="cover">
+      <h2>
+Nomenclature
+      </h2>
+    </section>
+    <section>
+      <h3>
+
+      </h3>
+      <ul>
+        <li>
+        </li>
+      </ul>
+    </section>
+  </section>
+
+
+
+
+
+
+
+
+
+
+  <section data-background="#333333">
+  <h1>Thank You!</h1>
+  </section>
+
+  <section data-background="green">
+  <h1>Questions?</h1>
+  </section>
+
+</div>
+</div>
+
+<script src="./html/bower_components/reveal.js/lib/js/head.min.js"></script>
+<script src="./html/bower_components/reveal.js/js/reveal.js"></script>
+<script src="./html/bower_components/jquery/dist/jquery.min.js"></script>
+<script src="./html/init.js"></script>
+</body>
+/html>
