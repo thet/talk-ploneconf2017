@@ -125,6 +125,10 @@ Architecture
 Use Cases
 =========
 
+- build a bundle on CLI and TTw
+- deploy changes in mockup to cmfplone
+
+
 Immediate Plug and Play experience
 ----------------------------------
 Option 1:
