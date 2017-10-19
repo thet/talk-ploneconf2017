@@ -17,9 +17,15 @@ body {
 }
 .reveal pre {
     box-shadow: none;
+    display: block;
+    margin: 1em auto;
+    text-align: center;
 }
 .reveal pre code {
+    display: inline-block;
     max-height: 82vh;
+    padding: 2em;
+    text-align: left;
 }
 
 .reveal a {
