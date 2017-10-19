@@ -17,7 +17,11 @@ body {
 }
 .reveal pre {
     box-shadow: none;
-}    
+}
+.reveal pre code {
+    max-height: 82vh;
+}
+
 .reveal a {
     color: white;
     text-decoration: underline;
