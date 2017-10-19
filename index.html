@@ -478,9 +478,71 @@ class FilterTile(Tile):
       </pre>
     </section>
 
+    <section>
+      <h3>
+Build a bundle
+      </h3>
+      <pre>
+        <code data-trim>
+./bin/plone-compile-resources --help
+usage: plone-compile-resources [-h] [-i INSTANCE] [-s SITE_ID] [-b BUNDLE]
+                               [--compile-dir COMPILE_DIR] [-d BASE_DIR] [-G]
+                               [-I] [-C]
 
+Generate and setup Grunt infrastructure, then compile JS/LESS bundles for
+Plone.
 
+optional arguments:
+  -h, --help            show this help message and exit
+  -i INSTANCE, --instance INSTANCE
+                        path to instance executable. If not provided, will
+                        look in bin this was executed from for instance or
+                        client1 (default: None)
+  -s SITE_ID, --site-id SITE_ID
+                        ID of the Plone site to fetch the configuration from.
+                        Used only while Gruntfile generation. (default: Plone)
+  -b BUNDLE, --bundle BUNDLE
+                        Name of bundle to compile. Used while compile step.
+                        (default: all)
+  --compile-dir COMPILE_DIR
+                        Output directory for the compiled bundle files. Used
+                        only while Gruntfile generation. If not given the
+                        directory is looked up from Plone registry. (default:
+                        )
+  -d BASE_DIR, --base-dir BASE_DIR
+                        Base directory for this script (by default current
+                        working directory). (default: .)
+  -G, --skip-generate-gruntfile
+                        Skip generation of Gruntfile.js (default: False)
+  -I, --skip-npm-install
+                        Skip npm install step (default: False)
+  -C, --skip-compile    Skip compile step (running grunt) (default: False)
+        </code>
+      </pre>
+    </section>
+    <section>
+      <pre>
+        <code data-trim>
+./bin/plone-compile-resources -b plone
+        </code>
+      </pre>
+    </section>
+    <section>
+      <strong>Add this to your buildout:</strong>
+      <pre>
+        <code data-trim>
+[buildout]
+parts += compileresources
 
+[compileresources]
+recipe = zc.recipe.egg
+eggs =
+    ${buildout:eggs}
+scripts =
+    plone-compile-resources
+        </code>
+      </pre>
+    </section>
 
   </section>
 
