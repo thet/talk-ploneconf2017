@@ -2,6 +2,8 @@
   "name": "mockup-training-slides",
   "version": "1.0.0.dev0",
   "dependencies": {
+    "jquery": "",
+    "reveal.js": "",
     "reveal.js-plugin-externalcode": "https://github.com/pquerna/reveal.js-plugin-externalcode.git"
   }
 }
