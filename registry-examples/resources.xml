@@ -1,0 +1,14 @@
+<?xml version="1.0"?>
+<registry>
+
+  <records
+      prefix="plone.resources/pat-fancyoverlay"
+      interface='Products.CMFPlone.interfaces.IResourceRegistry'>
+    <value key="js">++plone++bda.aaf.site/components/pat-fancyoverlay/src/pat-fancyoverlay.js</value>
+    <value key="css">
+      <element>++plone++bda.aaf.site/components/pat-fancyoverlay/src/pattern.less</element>
+    </value>
+    <value key="url">++plone++bda.aaf.site/components/pat-fancyoverlay/src</value>
+  </records>
+
+</registry>
