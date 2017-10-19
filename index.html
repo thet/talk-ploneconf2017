@@ -409,11 +409,79 @@ Resource and Bundle definitions
 Examples
       </h2>
     </section>
+
     <section>
+      <h3>
+Custom ``plone`` and ``plone-logged-in`` bundles
+      </h3>
       <pre>
-        <code data-code="./registry-examples/resources.xml" data-trim></code>
+        <code>
+<?xml version="1.0"?>
+<registry>
+
+  <records prefix="plone.resources/plone" interface="Products.CMFPlone.interfaces.IResourceRegistry">
+    <value key="js">++plone++bda.aaf.site/plone.js</value>
+    <value key="css">
+      <element>++plone++bda.aaf.site/plone.less</element>
+    </value>
+  </records>
+
+  <records prefix="plone.bundles/plone" interface="Products.CMFPlone.interfaces.IBundleRegistry">
+    <value key="jscompilation">++plone++myproject/plone-compiled.min.js</value>
+    <value key="csscompilation">++plone++myproject/plone-compiled.min.css</value>
+    <value key="resources">
+      <element>plone</element>
+    </value>
+  </records>
+
+</registry>
+        </code>
+      </pre>
+      <strong>Create empty stub resources first!</strong>
+    </section>
+
+    <section>
+      <h3>
+Immediate Plug and Play experience
+      </h3>
+      <a href="https://github.com/collective/collective.lazysizes/blob/master/src/collective/lazysizes/profiles/default/registry.xml">collective.lazysizes/src/collective/lazysizes/profiles/default/registry.xml</a>
+      <pre>
+        <code data-code="https://raw.githubusercontent.com/collective/collective.lazysizes/master/src/collective/lazysizes/profiles/default/registry.xml" data-trim>
+        </code>
       </pre>
     </section>
+
+    <section>
+      <h3>
+Deploy resources only for specific pages
+      </h3>
+      <a href="https://github.com/plone/Products.CMFPlone/blob/master/Products/CMFPlone/resources/__init__.py">Products.CMFPlone/Products/CMFPlone/resources/__init__.py</a>
+      <pre>
+        <code data-code="https://raw.githubusercontent.com/plone/Products.CMFPlone/master/Products/CMFPlone/resources/__init__.py" data-trim>
+        </code>
+      </pre>
+    </section>
+    <section>
+      <pre>
+        <code data-trim>
+# -*- coding: utf-8 -*-
+from plone.tiles import Tile
+from Products.CMFPlone.resources import add_bundle_on_request
+from Products.CMFPlone.utils import get_top_request
+
+class FilterTile(Tile):
+
+    def __init__(self, context, request):
+        top_request = get_top_request(request)
+        add_bundle_on_request(top_request, 'aaf-jsapp')
+        </code>
+      </pre>
+    </section>
+
+
+
+
+
   </section>
 
 
