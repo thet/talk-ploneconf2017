@@ -14,7 +14,8 @@
   <link href="https://cdnjs.cloudflare.com/ajax/libs/reveal.js/3.5.0/lib/css/zenburn.css" rel="stylesheet"-->
   <link href="./resources/libs/reveal.js/css/reveal.css" rel="stylesheet">
   <link href="./resources/libs/reveal.js/css/theme/simple.css" rel="stylesheet">
-  <link href="./resources/libs/reveal.js/lib/css/zenburn.css" rel="stylesheet">
+  <link href="./resources/highlightjs-github.css" rel="stylesheet">
+  <!--link href="./resources/libs/reveal.js/lib/css/zenburn.css" rel="stylesheet"-->
   <link href="./resources/custom.css" rel="stylesheet">
   <script>
     if( window.location.search.match( /print-pdf/gi ) ) {
@@ -73,7 +74,7 @@ paragraph
   -->
 
   <!--
-  <section data-background="green">
+  <section data-background="darkgreen">
     <section class="cover">
       <h2>
       </h2>
@@ -100,7 +101,7 @@ paragraph
     </footer>
   </section>
 
-  <section data-background="green">
+  <section data-background="darkgreen">
     <section class="cover">
       <h2>Who am I</h2>
     </section>
@@ -179,7 +180,7 @@ Same purpose and goals in Plone 4 and 5
   </section>
 
 
-  <section data-background="green">
+  <section data-background="darkgreen">
     <section class="cover">
       <h2>
 The resource registry in Plone 4
@@ -309,7 +310,7 @@ It's magic.
 
 
 
-  <section data-background="green">
+  <section data-background="darkgreen">
     <section class="cover">
       <h2>
 Resource and Bundle definitions
@@ -317,68 +318,45 @@ Resource and Bundle definitions
     </section>
     <section>
       <a href="https://github.com/plone/Products.CMFPlone/blob/master/Products/CMFPlone/interfaces/resources.py">Products.CMFPlone/Products/CMFPlone/interfaces/resources.py</a>
-      <pre>
-        <code data-code="https://raw.githubusercontent.com/plone/Products.CMFPlone/master/Products/CMFPlone/interfaces/resources.py" data-trim>
-        </code>
-      </pre>
+      <pre><code data-code="https://raw.githubusercontent.com/plone/Products.CMFPlone/master/Products/CMFPlone/interfaces/resources.py" data-trim></code></pre>
     </section>
 
     <section>
       <a href="https://github.com/plone/Products.CMFPlone/blob/master/Products/CMFPlone/profiles/dependencies/registry.xml">Products.CMFPlone/Products/CMFPlone/profiles/dependencies/registry.xml</a>
-      <pre>
-        <code data-code="https://raw.githubusercontent.com/plone/Products.CMFPlone/master/Products/CMFPlone/profiles/dependencies/registry.xml" data-trim>
-        </code>
-      </pre>
+      <pre><code data-code="https://raw.githubusercontent.com/plone/Products.CMFPlone/master/Products/CMFPlone/profiles/dependencies/registry.xml" data-trim></code></pre>
     </section>
 
     <!-- require js config aequivalent -->
     <section>
       <a href="https://github.com/plone/mockup/blob/master/mockup/js/config.js">mockup/mockup/js/config.js</a>
-      <pre>
-        <code data-code="https://raw.githubusercontent.com/plone/mockup/master/mockup/js/config.js" data-trim>
-        </code>
-      </pre>
+      <pre><code data-code="https://raw.githubusercontent.com/plone/mockup/master/mockup/js/config.js" data-trim></code></pre>
     </section>
 
     <section>
       <a href="https://github.com/plone/mockup/blob/master/mockup/patterns/formautofocus/pattern.js">mockup/mockup/patterns/formautofocus/pattern.js</a>
-      <pre>
-        <code data-code="https://raw.githubusercontent.com/plone/mockup/master/mockup/patterns/formautofocus/pattern.js" data-trim>
-        </code>
-      </pre>
+      <pre><code data-code="https://raw.githubusercontent.com/plone/mockup/master/mockup/patterns/formautofocus/pattern.js" data-trim></code></pre>
     </section>
 
     <section>
       <a href="https://github.com/plone/Products.CMFPlone/blob/master/Products/CMFPlone/static/plone.js">Products.CMFPlone/Products/CMFPlone/static/plone.js</a>
-      <pre>
-        <code data-code="https://raw.githubusercontent.com/plone/Products.CMFPlone/master/Products/CMFPlone/static/plone.js" data-trim>
-        </code>
-      </pre>
+      <pre><code data-code="https://raw.githubusercontent.com/plone/Products.CMFPlone/master/Products/CMFPlone/static/plone.js" data-trim></code></pre>
     </section>
 
     <section>
       <h3>legacy resources</h3>
-      <pre>
-        <code data-trim>
+      <pre><code data-trim>
 <records prefix="plone.bundles/plone-legacy">
   <value key="compile">False</value>
 </records>
-        </code>
-      </pre>
+      </code></pre>
     </section>
     <section>
       <a href="https://github.com/plone/Products.CMFPlone/blob/master/Products/CMFPlone/resources/browser/cook.py">Products.CMFPlone/Products/CMFPlone/resources/browser/cook.py</a>
-      <pre>
-        <code data-code="https://raw.githubusercontent.com/plone/Products.CMFPlone/master/Products/CMFPlone/resources/browser/cook.py" data-trim>
-        </code>
-      </pre>
+      <pre><code data-code="https://raw.githubusercontent.com/plone/Products.CMFPlone/master/Products/CMFPlone/resources/browser/cook.py" data-trim></code></pre>
     </section>
     <section>
       <a href="https://github.com/plone/Products.CMFPlone/blob/master/Products/CMFPlone/resources/browser/scripts.pt">Products.CMFPlone/Products/CMFPlone/resources/browser/scripts.pt</a>
-      <pre>
-        <code data-code="https://raw.githubusercontent.com/plone/Products.CMFPlone/master/Products/CMFPlone/resources/browser/scripts.pt" data-trim>
-        </code>
-      </pre>
+      <pre><code data-code="https://raw.githubusercontent.com/plone/Products.CMFPlone/master/Products/CMFPlone/resources/browser/scripts.pt" data-trim></code></pre>
     </section>
 
     <section>
@@ -386,24 +364,18 @@ Resource and Bundle definitions
     </section>
     <section>
       <a href="https://github.com/plone/Products.CMFPlone/blob/master/Products/CMFPlone/static/plone.less">Products.CMFPlone/Products/CMFPlone/static/plone.less</a>
-      <pre>
-        <code data-code="https://raw.githubusercontent.com/plone/Products.CMFPlone/master/Products/CMFPlone/static/plone.less" data-trim>
-        </code>
-      </pre>
+      <pre><code data-code="https://raw.githubusercontent.com/plone/Products.CMFPlone/master/Products/CMFPlone/static/plone.less" data-trim></code></pre>
     </section>
     <section>
       <a href="https://github.com/plone/Products.CMFPlone/blob/master/Products/CMFPlone/resources/browser/mixins.py">Products.CMFPlone/Products/CMFPlone/resources/browser/mixins.py</a>
-      <pre>
-        <code data-code="https://raw.githubusercontent.com/plone/Products.CMFPlone/master/Products/CMFPlone/resources/browser/mixins.py" data-trim>
-        </code>
-      </pre>
+      <pre><code data-code="https://raw.githubusercontent.com/plone/Products.CMFPlone/master/Products/CMFPlone/resources/browser/mixins.py" data-trim></code></pre>
     </section>
 
   </section>
 
 
 
-  <section data-background="green">
+  <section data-background="darkgreen">
     <section class="cover">
       <h2>
 Examples
@@ -414,8 +386,7 @@ Examples
       <h3>
 Custom ``plone`` and ``plone-logged-in`` bundles
       </h3>
-      <pre>
-        <code>
+      <pre><code>
 <?xml version="1.0"?>
 <registry>
 
@@ -435,8 +406,7 @@ Custom ``plone`` and ``plone-logged-in`` bundles
   </records>
 
 </registry>
-        </code>
-      </pre>
+      </code></pre>
       <strong>Create empty stub resources first!</strong>
     </section>
 
@@ -445,10 +415,7 @@ Custom ``plone`` and ``plone-logged-in`` bundles
 Immediate Plug and Play experience
       </h3>
       <a href="https://github.com/collective/collective.lazysizes/blob/master/src/collective/lazysizes/profiles/default/registry.xml">collective.lazysizes/src/collective/lazysizes/profiles/default/registry.xml</a>
-      <pre>
-        <code data-code="https://raw.githubusercontent.com/collective/collective.lazysizes/master/src/collective/lazysizes/profiles/default/registry.xml" data-trim>
-        </code>
-      </pre>
+      <pre><code data-code="https://raw.githubusercontent.com/collective/collective.lazysizes/master/src/collective/lazysizes/profiles/default/registry.xml" data-trim></code></pre>
     </section>
 
     <section>
@@ -456,14 +423,10 @@ Immediate Plug and Play experience
 Deploy resources only for specific pages
       </h3>
       <a href="https://github.com/plone/Products.CMFPlone/blob/master/Products/CMFPlone/resources/__init__.py">Products.CMFPlone/Products/CMFPlone/resources/__init__.py</a>
-      <pre>
-        <code data-code="https://raw.githubusercontent.com/plone/Products.CMFPlone/master/Products/CMFPlone/resources/__init__.py" data-trim>
-        </code>
-      </pre>
+      <pre><code data-code="https://raw.githubusercontent.com/plone/Products.CMFPlone/master/Products/CMFPlone/resources/__init__.py" data-trim></code></pre>
     </section>
     <section>
-      <pre>
-        <code data-trim>
+      <pre><code data-trim>
 # -*- coding: utf-8 -*-
 from plone.tiles import Tile
 from Products.CMFPlone.resources import add_bundle_on_request
@@ -474,16 +437,14 @@ class FilterTile(Tile):
     def __init__(self, context, request):
         top_request = get_top_request(request)
         add_bundle_on_request(top_request, 'aaf-jsapp')
-        </code>
-      </pre>
+      </code></pre>
     </section>
 
     <section>
       <h3>
 Build a bundle
       </h3>
-      <pre>
-        <code data-trim>
+      <pre><code data-trim>
 ./bin/plone-compile-resources --help
 usage: plone-compile-resources [-h] [-i INSTANCE] [-s SITE_ID] [-b BUNDLE]
                                [--compile-dir COMPILE_DIR] [-d BASE_DIR] [-G]
@@ -517,20 +478,16 @@ optional arguments:
   -I, --skip-npm-install
                         Skip npm install step (default: False)
   -C, --skip-compile    Skip compile step (running grunt) (default: False)
-        </code>
-      </pre>
+       </code></pre>
     </section>
     <section>
-      <pre>
-        <code data-trim>
+      <pre><code data-trim>
 ./bin/plone-compile-resources -b plone
-        </code>
-      </pre>
+      </code></pre>
     </section>
     <section>
       <strong>Add this to your buildout:</strong>
-      <pre>
-        <code data-trim>
+      <pre><code data-trim>
 [buildout]
 parts += compileresources
 
@@ -540,13 +497,12 @@ eggs =
     ${buildout:eggs}
 scripts =
     plone-compile-resources
-        </code>
-      </pre>
+      </code></pre>
     </section>
 
   </section>
 
-  <section data-background="green">
+  <section data-background="darkgreen">
     <section class="cover">
       <h2>
 Future
@@ -575,7 +531,7 @@ PLIP: Restructure CMFPlone static resources
   <h1>Thank You!</h1>
   </section>
 
-  <section data-background="green">
+  <section data-background="darkgreen">
   <h1>Questions?</h1>
   </section>
 
