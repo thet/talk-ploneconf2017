@@ -3,7 +3,7 @@
 <head>
   <meta charset="utf-8">
 
-  <title>This is Plone</title>
+  <title>Resource Registry Demystified</title>
 
   <meta name="description" content="Resource Registry Demystified - Plone Conference 2017">
   <meta name="author" content="Johannes Raggam, programmatic">
@@ -93,8 +93,6 @@ paragraph
 
   <section class="cover" data-background="blue">
     <h1>Resource Registry<br/>Demystified</h1>
-    <br/>
-    <br/>
     <br/>
     <footer>
       Johannes Raggam<br/>@ Plone Conference 2017, Barcelona
@@ -391,9 +389,9 @@ Custom ``plone`` and ``plone-logged-in`` bundles
 <registry>
 
   <records prefix="plone.resources/plone" interface="Products.CMFPlone.interfaces.IResourceRegistry">
-    <value key="js">++plone++bda.aaf.site/plone.js</value>
+    <value key="js">++plone++myproject/plone.js</value>
     <value key="css">
-      <element>++plone++bda.aaf.site/plone.less</element>
+      <element>++plone++myproject/plone.less</element>
     </value>
   </records>
 
@@ -547,3 +545,4 @@ PLIP: Restructure CMFPlone static resources
 <script src="./resources/init.js"></script>
 </body>
 </html>
+
