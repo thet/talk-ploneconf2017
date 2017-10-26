@@ -1,10 +1,9 @@
 /* global Reveal, hljs, $ */
 
 (function (Reveal, $) {
-  "use strict";
 
-  // var base_url = 'https://cdnjs.cloudflare.com/ajax/libs/reveal.js/3.5.0';
-  var base_url = '/resources/libs/reveal.js';
+  var base_url = 'https://cdnjs.cloudflare.com/ajax/libs/reveal.js/3.5.0';
+  // var base_url = '/resources/libs/reveal.js';
 
   // Full list of configuration options available here:
   // https://github.com/hakimel/reveal.js#configuration
