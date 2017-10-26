@@ -441,6 +441,21 @@ class FilterTile(Tile):
 
     <section>
       <h3>
+Deploy a bundle only for IE <= 11
+      </h3>
+      In the bundle definition for your registry.xml:
+      <pre><code data-trim>
+<records prefix="plone.bundles/my-quirks-bundle" interface="Products.CMFPlone.interfaces.IBundleRegistry">
+  <!-- ... -->
+  <value key="conditionalcomment">lte IE 11</value>
+</records>
+      </code></pre>
+    </section>
+
+
+
+    <section>
+      <h3>
 Build a bundle
       </h3>
       <pre><code data-trim>
